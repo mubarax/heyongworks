@@ -2,6 +2,7 @@
     // C#实现MATLAB的 spdiags 函数
     public static double[,] spdiags(double[,] basemat, int[] diagIndexs, int n)
     {
+        
         double[,] res = new double[n, n];
         for (int i = 0; i < n; i++)
             for (int j = 0; j < n; j++)
@@ -28,12 +29,13 @@
 
         }
 
+        /* test 
         for (int i = 0; i < res.GetLength(0); i++) {
             for (int j = 0; j < res.GetLength(1); j++) {
-                System.Console.Write(res[i, j].ToString() + " " );
+                System.Console.Write(res[i, j].ToString() + "\t" );
             }
             System.Console.Write("\n");
-        }
+        }*/
 
         return res;
     }
